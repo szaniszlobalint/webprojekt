@@ -1,0 +1,19 @@
+<app-nav></app-nav>
+<div [ngSwitch]="category">
+  <div *ngSwitchCase="'product'" class="container2">
+    <app-product-card *ngFor="let item of products" [product]="item" color="primary" ></app-product-card>
+  </div>
+</div>
+
+<form class="-form">
+  <mat-form-field class="-full-width">
+    <mat-label>Név</mat-label>
+    <input matInput placeholder="Név" >
+  </mat-form-field>
+
+  <mat-form-field class="-full-width">
+    <mat-label>Leírás</mat-label>
+    <textarea matInput placeholder="Leírás"></textarea>
+  </mat-form-field>
+</form>
+  
